@@ -24,27 +24,27 @@ class GoogleSuggestions extends Component {
         .includes(searchText.toLowerCase()),
     )
     return (
-      <div className="background">
-        <div className="">
+      <div className="app-container">
+        <div className="google-suggestions-container">
           <img
-            className=""
+            className="google-logo"
             src="https://assets.ccbp.in/frontend/react-js/google-logo.png"
             alt="googleMainText"
           />
-          <div className="">
+          <div className="search-input-suggestions-container">
             <img
-              className=""
+              className="search-icon"
               src="https://assets.ccbp.in/frontend/react-js/google-search-icon.png "
               alt="searchIcon"
             />
             <input
               type="search"
-              className=""
+              className="search-input"
               onChange={this.onChangeText}
               value={searchText}
               placeholder="Search Google"
             />
-            <ul>
+            <ul className="suggestions-list">
               {filteredList.map(eachSuggestion => (
                 <SuggestionItem
                   key={eachSuggestion.id}
